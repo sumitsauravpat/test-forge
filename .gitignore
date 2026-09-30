@@ -6,3 +6,9 @@ playwright-report/
 blob-report/
 playwright/.cache/
 .DS_Store
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

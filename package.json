@@ -1,0 +1,40 @@
+{
+  "name": "test-forge",
+  "version": "1.0.0",
+  "description": "A hands-on REST API testing, BDD/Gherkin, and SQL practice project — built from first principles, with every example grounded in real API traffic rather than toy examples.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:report": "playwright show-report",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumitsauravpat/test-forge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumitsauravpat/test-forge/issues"
+  },
+  "homepage": "https://github.com/sumitsauravpat/test-forge#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.12.0",
+    "prettier": "^3.9.9",
+    "typescript-eslint": "^8.71.0"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.4"
+  }
+}
