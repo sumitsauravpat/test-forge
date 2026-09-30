@@ -1,0 +1,26 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const itemQuoteBody: any = {
+  skus: ['LAIP16128BK'],
+  paymentOption: 'glow',
+  warranty: '3SAPPCR14',
+  psb: '10',
+  brandName: 'TestBrand',
+  channelId: 'CPMS_CURRENTCHANNELOUTLETID_1100054531',
+  marketSegmentId: 'ON',
+  customerCategoryId: 'd4f04e79-85bc-4233-87df-04838f140ccb',
+  salesChannel: {
+    role: 'User',
+    salesRepId: '29HZ',
+    salesRepInternalId: '10446016',
+    channelContributionCd: '',
+    salesRepPortalLanguage: 'en',
+    salesRepAssociatedOutlet: [{ channelOutletId: '1100032636', outletInternalId: '10446000' }],
+    channelOrganizationNumber: '60180',
+    channelOrganizationTypeCd: 'Dir',
+    outletAssociatedProvinces: ['ON'],
+    salesPresence: '',
+    storeId: '0000',
+    channelOrganizationInternalId: '10445995',
+    employeeId: null,
+  },
+};

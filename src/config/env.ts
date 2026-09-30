@@ -9,6 +9,7 @@ interface EnvConfig {
   apiEnv: string;
   mfeEnv: string;
   mfeTransactionId: string;
+  itemQuoteUrl: string;
 }
 
 function requireEnv(key: string): string {
@@ -28,4 +29,5 @@ export const env: EnvConfig = {
   apiEnv: requireEnv('API_ENV'),
   mfeEnv: requireEnv('MFE_ENV'),
   mfeTransactionId: requireEnv('MFE_TRANSACTION_ID'),
+  itemQuoteUrl: requireEnv('ITEM_QUOTE_URL'),
 };
