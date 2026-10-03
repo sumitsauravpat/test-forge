@@ -1,8 +1,19 @@
 import { defineConfig } from '@playwright/test';
 import { env } from './src/config/env';
+import { defineBddConfig } from 'playwright-bdd';
+
+const bddTestDir = defineBddConfig({
+  features: 'features/api/*.feature',
+  steps: 'steps/api/*.ts',
+  outputDir: 'tests/.features-gen',
+  importTestFrom: 'src/fixtures/bddFixtures.ts',
+});
 
 export default defineConfig({
-  testDir: './tests',
+  projects: [
+    { name: 'bdd', testDir: bddTestDir },
+    { name: 'api', testDir: './tests', testIgnore: '**/.features-gen/**' },
+  ],
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */

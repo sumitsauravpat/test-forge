@@ -12,3 +12,6 @@ playwright/.cache/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# playwright-bdd generated output
+/tests/.features-gen/
