@@ -1,6 +1,7 @@
 import { APIRequestContext } from '@playwright/test';
 import { env } from '../config/env';
 import { ItemQuoteResponse } from '../types/itemQuote.types';
+import { mapItemQuote } from './itemQuoteMapper';
 
 // Purpose — the third real endpoint from the original Postman collection; creates a device/item quote
 export async function createItemQuote(
@@ -17,5 +18,5 @@ export async function createItemQuote(
   });
 
   const value = await response.json();
-  return value;
+  return mapItemQuote(value);
 }

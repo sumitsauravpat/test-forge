@@ -8,5 +8,5 @@ test('validates the real createItemQuote call', async ({ request }) => {
   const result = await createItemQuote(request, token, itemQuoteBody);
   expect(result.successInd).toBe(true);
   expect(result.status).toBe(200);
-  expect(result.data.quoteId).toBeTruthy();
+  expect(result.data.referenceId).toBeTruthy();
 });

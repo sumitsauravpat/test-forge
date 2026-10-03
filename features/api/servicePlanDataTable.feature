@@ -6,4 +6,4 @@ Feature: Service Plan Patch With Table-Driven Subscriber Details
       | distributionChannelId | defaultChannel  |
       | customerCategoryId    | defaultCategory |
       | offeringId            | defaultOffering |
-    Then the response should include a valid quoteId
+    Then the response should include a valid referenceId

@@ -1,6 +1,6 @@
 import { ResponseDetailsResponse } from '../types/responseDetails.types';
 
-// Purpose — translates the real server's field names (salesSummary/salesSummaryItems/
+// Purpose — translates the real server's field names (quoteId/salesSummary/salesSummaryItems/
 // ratePlanQuoteItemId/dueTodayNoTaxAmount/dueMonthlyNoTaxAmount) into our own, so no caller
 // in this project ever reads the server's raw vocabulary. The negative-test error shape
 // (bffError, no data/salesSummary at all) has nothing to remap, so it passes through untouched.
@@ -12,6 +12,7 @@ export function mapResponseDetails(raw: any): ResponseDetailsResponse {
   if (raw?.data?.salesSummary) {
     mapped.data = {
       ...raw.data,
+      referenceId: raw.data.quoteId,
       planSummary: {
         state: raw.data.salesSummary.state,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,6 +24,7 @@ export function mapResponseDetails(raw: any): ResponseDetailsResponse {
       },
     };
     delete mapped.data.salesSummary;
+    delete mapped.data.quoteId;
   }
 
   return mapped;

@@ -7,7 +7,7 @@ import { expect } from '@playwright/test';
 const { When, Then } = createBdd(test);
 
 When(
-  'I fetch the Response Details using an invalid or nonexistent quoteId.',
+  'I fetch the Response Details using an invalid or nonexistent referenceId.',
   async ({ request, scenarioContext }) => {
     scenarioContext.responseInvalid = await getResponseDetails(
       request,
@@ -18,7 +18,7 @@ When(
 );
 
 Then(
-  'the response of Response Details should be 404 for invalid quoteId',
+  'the response of Response Details should be 404 for invalid referenceId',
   async ({ scenarioContext }) => {
     expect(scenarioContext.responseInvalid.status).toBe(404);
   },

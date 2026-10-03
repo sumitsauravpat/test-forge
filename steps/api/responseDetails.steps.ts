@@ -16,18 +16,18 @@ When('I patch a service plan with valid subscriber details', async ({ request, s
   scenarioContext.response = await patchServicePlan(request, scenarioContext.token, servicePlanBody);
 });
 
-Then('the response should include a valid quoteId', async ({ scenarioContext }) => {
-  expect(scenarioContext.response.data.quoteId).toBeTruthy();
+Then('the response should include a valid referenceId', async ({ scenarioContext }) => {
+  expect(scenarioContext.response.data.referenceId).toBeTruthy();
 });
 
 Then(
-  'the quoteId should match when I fetch the response details',
+  'the referenceId should match when I fetch the response details',
   async ({ request, scenarioContext }) => {
     const responseDetailsResponse = await getResponseDetails(
       request,
       scenarioContext.token,
-      scenarioContext.response.data.quoteId,
+      scenarioContext.response.data.referenceId,
     );
-    expect(responseDetailsResponse.data.quoteId).toBe(scenarioContext.response.data.quoteId);
+    expect(responseDetailsResponse.data.referenceId).toBe(scenarioContext.response.data.referenceId);
   },
 );

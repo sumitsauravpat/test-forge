@@ -15,7 +15,7 @@ export interface ResponseDetailsResponse {
   status: number;
   bffAlerts?: BffAlert[];
   data: {
-    quoteId: string;
+    referenceId: string;
     planSummary: {
       state: string;
       planSummaryItems: ResponseDetailsItem[];

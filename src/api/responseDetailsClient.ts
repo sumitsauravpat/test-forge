@@ -3,7 +3,7 @@ import { env } from '../config/env';
 import { ResponseDetailsResponse, PatchServicePlanResponse } from '../types/responseDetails.types';
 import { mapResponseDetails } from './responseDetailsMapper';
 
-// Purpose — this endpoint generates a brand-new real quoteId every call; tests chain that id into getResponseDetails
+// Purpose — this endpoint generates a brand-new real referenceId every call; tests chain that id into getResponseDetails
 export async function patchServicePlan(
   request: APIRequestContext,
   token: string,
@@ -28,9 +28,9 @@ export async function patchServicePlan(
 export async function getResponseDetails(
   request: APIRequestContext,
   token: string,
-  quoteId: string,
+  referenceId: string,
 ): Promise<ResponseDetailsResponse> {
-  const response = await request.get(`${env.baseUrl}/salesSummary/${quoteId}`, {
+  const response = await request.get(`${env.baseUrl}/salesSummary/${referenceId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
       env: env.environment,

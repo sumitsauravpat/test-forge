@@ -13,7 +13,7 @@ export const servicePlanBody: any = {
       addressQualificationId: '',
     },
   ],
-  quoteId: '',
+  referenceId: '',
   billingAccountNumber: '',
   distributionChannelId: servicePlanValues.defaultChannel,
   customerCategoryId: servicePlanValues.defaultCategory,
