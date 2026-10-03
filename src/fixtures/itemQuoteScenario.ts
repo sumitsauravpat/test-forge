@@ -1,26 +1,30 @@
+import { servicePlanValues } from './servicePlanValues';
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const itemQuoteBody: any = {
-  skus: ['LAIP16128BK'],
-  paymentOption: 'glow',
-  warranty: '3SAPPCR14',
-  psb: '10',
+  skus: [servicePlanValues.itemSku],
+  paymentOption: servicePlanValues.itemPaymentOption,
+  warranty: servicePlanValues.itemWarranty,
+  serviceCode: servicePlanValues.itemServiceCode,
   brandName: 'TestBrand',
-  channelId: 'CPMS_CURRENTCHANNELOUTLETID_1100054531',
-  marketSegmentId: 'ON',
-  customerCategoryId: 'd4f04e79-85bc-4233-87df-04838f140ccb',
-  salesChannel: {
+  channelId: servicePlanValues.itemChannelId,
+  marketSegmentId: servicePlanValues.itemMarketSegment,
+  customerCategoryId: servicePlanValues.defaultCategory,
+  channelInfo: {
     role: 'User',
-    salesRepId: '29HZ',
-    salesRepInternalId: '10446016',
-    channelContributionCd: '',
-    salesRepPortalLanguage: 'en',
-    salesRepAssociatedOutlet: [{ channelOutletId: '1100032636', outletInternalId: '10446000' }],
-    channelOrganizationNumber: '60180',
-    channelOrganizationTypeCd: 'Dir',
-    outletAssociatedProvinces: ['ON'],
+    repId: servicePlanValues.itemRepId,
+    repInternalId: servicePlanValues.itemRepInternalId,
+    channelContributionCode: '',
+    repLanguage: 'en',
+    repOutlets: [
+      { outletId: servicePlanValues.itemOutletId, outletInternalId: servicePlanValues.itemOutletInternalId },
+    ],
+    orgNumber: servicePlanValues.itemOrgNumber,
+    orgTypeCode: 'Dir',
+    outletProvinces: ['ON'],
     salesPresence: '',
     storeId: '0000',
-    channelOrganizationInternalId: '10445995',
+    orgInternalId: servicePlanValues.itemOrgInternalId,
     employeeId: null,
   },
 };

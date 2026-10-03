@@ -1,6 +1,7 @@
 import { createBdd } from 'playwright-bdd';
 import { test } from '../../src/fixtures/bddFixtures';
 import { getResponseDetails } from '../../src/api/responseDetailsClient';
+import { servicePlanValues } from '../../src/fixtures/servicePlanValues';
 import { expect } from '@playwright/test';
 
 const { When, Then } = createBdd(test);
@@ -23,6 +24,10 @@ Then(
   },
 );
 
-Then('the error body of response should be "BFF-QUOTE-NOT-FOUND"', async ({ scenarioContext }) => {
-  expect(scenarioContext.responseInvalid.bffError.code).toBe('BFF-QUOTE-NOT-FOUND');
-});
+Then(
+  'the error body of response should be {string}',
+  async ({ scenarioContext }, errorCodeLabel) => {
+    const expectedCode = servicePlanValues[errorCodeLabel as keyof typeof servicePlanValues];
+    expect(scenarioContext.responseInvalid.bffError.code).toBe(expectedCode);
+  },
+);

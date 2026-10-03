@@ -13,9 +13,7 @@ When(
 
     const patchedBody = {
       ...servicePlanBody,
-      subscriberRatePlan: [
-        { ...servicePlanBody.subscriberRatePlan[0], ratePlanProductOfferingId: offeringId },
-      ],
+      planItems: [{ ...servicePlanBody.planItems[0], offeringId }],
     };
 
     scenarioContext.response = await patchServicePlan(request, scenarioContext.token, patchedBody);

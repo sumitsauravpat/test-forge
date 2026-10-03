@@ -19,10 +19,10 @@ When(
       ...servicePlanBody,
       distributionChannelId: resolveLabel(value.distributionChannelId),
       customerCategoryId: resolveLabel(value.customerCategoryId),
-      subscriberRatePlan: [
+      planItems: [
         {
-          ...servicePlanBody.subscriberRatePlan[0],
-          ratePlanProductOfferingId: resolveLabel(value.ratePlanProductOfferingId),
+          ...servicePlanBody.planItems[0],
+          offeringId: resolveLabel(value.offeringId),
         },
       ],
     };

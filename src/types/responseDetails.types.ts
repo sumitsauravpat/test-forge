@@ -3,10 +3,11 @@ export interface BffAlert {
   message: string;
 }
 
+// Our own renamed shape — what every caller in this project sees
 export interface ResponseDetailsItem {
-  ratePlanQuoteItemId: string;
-  dueTodayNoTaxAmount: number;
-  dueMonthlyNoTaxAmount: number;
+  quoteItemId: string;
+  dueTodayAmount: number;
+  dueMonthlyAmount: number;
 }
 
 export interface ResponseDetailsResponse {
@@ -15,9 +16,9 @@ export interface ResponseDetailsResponse {
   bffAlerts?: BffAlert[];
   data: {
     quoteId: string;
-    salesSummary: {
+    planSummary: {
       state: string;
-      salesSummaryItems: ResponseDetailsItem[];
+      planSummaryItems: ResponseDetailsItem[];
     };
   };
 }
