@@ -8,6 +8,7 @@
     "test": "playwright test",
     "bddgen": "bddgen",
     "test:report": "playwright show-report",
+    "test:ui": "NODE_OPTIONS=\"--import tsx\" cucumber-js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
