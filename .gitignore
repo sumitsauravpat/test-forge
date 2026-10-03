@@ -15,3 +15,6 @@ playwright/.cache/
 
 # playwright-bdd generated output
 /tests/.features-gen/
+
+# real internal correlation values used by Gherkin label lookups
+/src/fixtures/servicePlanValues.ts

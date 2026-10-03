@@ -1,14 +1,14 @@
 import { createBdd } from 'playwright-bdd';
 import { test } from '../../src/fixtures/bddFixtures';
-import { getSalesSummary } from '../../src/api/salesSummaryClient';
+import { getResponseDetails } from '../../src/api/responseDetailsClient';
 import { expect } from '@playwright/test';
 
 const { When, Then } = createBdd(test);
 
 When(
-  'I fetch the Sales Summary Response using an invalid or nonexistent quoteId.',
+  'I fetch the Response Details using an invalid or nonexistent quoteId.',
   async ({ request, scenarioContext }) => {
-    scenarioContext.responseInvalid = await getSalesSummary(
+    scenarioContext.responseInvalid = await getResponseDetails(
       request,
       scenarioContext.token,
       '494c4624-f425-4343-aaf4-ddef10dbde28',
@@ -17,7 +17,7 @@ When(
 );
 
 Then(
-  'the response of Sales Summary should be 404 for invalid quoteId',
+  'the response of Response Details should be 404 for invalid quoteId',
   async ({ scenarioContext }) => {
     expect(scenarioContext.responseInvalid.status).toBe(404);
   },

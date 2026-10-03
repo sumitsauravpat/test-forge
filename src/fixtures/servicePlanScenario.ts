@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const ratePlanBody: any = {
+export const servicePlanBody: any = {
   subscriberRatePlan: [
     {
       subscriberBusinessGroupId: '11111111-2222-3333-4444-555555555555',

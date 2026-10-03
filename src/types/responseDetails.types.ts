@@ -3,13 +3,13 @@ export interface BffAlert {
   message: string;
 }
 
-export interface SalesSummaryItem {
+export interface ResponseDetailsItem {
   ratePlanQuoteItemId: string;
   dueTodayNoTaxAmount: number;
   dueMonthlyNoTaxAmount: number;
 }
 
-export interface SalesSummaryResponse {
+export interface ResponseDetailsResponse {
   successInd: boolean;
   status: number;
   bffAlerts?: BffAlert[];
@@ -17,9 +17,9 @@ export interface SalesSummaryResponse {
     quoteId: string;
     salesSummary: {
       state: string;
-      salesSummaryItems: SalesSummaryItem[];
+      salesSummaryItems: ResponseDetailsItem[];
     };
   };
 }
 
-export type PatchRatePlanResponse = SalesSummaryResponse;
+export type PatchServicePlanResponse = ResponseDetailsResponse;

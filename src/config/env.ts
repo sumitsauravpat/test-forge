@@ -6,10 +6,11 @@ interface EnvConfig {
   clientId: string;
   clientSecret: string;
   scope: string;
-  apiEnv: string;
-  mfeEnv: string;
-  mfeTransactionId: string;
+  environment: string;
+  serviceEnv: string;
+  transactionId: string;
   itemQuoteUrl: string;
+  uiTestBaseUrl: string;
 }
 
 function requireEnv(key: string): string {
@@ -26,8 +27,9 @@ export const env: EnvConfig = {
   clientId: requireEnv('CLIENT_ID'),
   clientSecret: requireEnv('CLIENT_SECRET'),
   scope: requireEnv('SCOPE'),
-  apiEnv: requireEnv('API_ENV'),
-  mfeEnv: requireEnv('MFE_ENV'),
-  mfeTransactionId: requireEnv('MFE_TRANSACTION_ID'),
+  environment: requireEnv('ENVIRONMENT'),
+  serviceEnv: requireEnv('SERVICE_ENV'),
+  transactionId: requireEnv('TRANSACTION_ID'),
   itemQuoteUrl: requireEnv('ITEM_QUOTE_URL'),
+  uiTestBaseUrl: requireEnv('UI_TEST_BASE_URL'),
 };
