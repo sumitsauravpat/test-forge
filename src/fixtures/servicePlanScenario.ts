@@ -17,7 +17,7 @@ export const servicePlanBody: any = {
   billingAccountNumber: '',
   distributionChannelId: servicePlanValues.defaultChannel,
   customerCategoryId: servicePlanValues.defaultCategory,
-  brandName: 'TestBrand',
+  brandName: servicePlanValues.brandName,
   marketId: servicePlanValues.marketId,
   customerId: '',
   mobileServiceList: '',

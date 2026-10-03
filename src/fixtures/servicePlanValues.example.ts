@@ -5,6 +5,7 @@ export const servicePlanValues = {
   defaultChannel: '',
   defaultCategory: '',
   notFoundErrorCode: '',
+  brandName: '',
   businessGroupId: '',
   marketingBundleId: '',
   marketId: '',

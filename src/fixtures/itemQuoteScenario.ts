@@ -6,7 +6,7 @@ export const itemQuoteBody: any = {
   paymentOption: servicePlanValues.itemPaymentOption,
   warranty: servicePlanValues.itemWarranty,
   serviceCode: servicePlanValues.itemServiceCode,
-  brandName: 'TestBrand',
+  brandName: servicePlanValues.brandName,
   channelId: servicePlanValues.itemChannelId,
   marketSegmentId: servicePlanValues.itemMarketSegment,
   customerCategoryId: servicePlanValues.defaultCategory,
